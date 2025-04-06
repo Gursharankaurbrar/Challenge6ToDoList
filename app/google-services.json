@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "69605269631",
+    "project_id": "challenge6todolist",
+    "storage_bucket": "challenge6todolist.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69605269631:android:debdaac14cedd25c819f4a",
+        "android_client_info": {
+          "package_name": "com.example.challenge6todolist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ_Ep5LkXQSrKx67Gho4bYKOpOJjHzujI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
