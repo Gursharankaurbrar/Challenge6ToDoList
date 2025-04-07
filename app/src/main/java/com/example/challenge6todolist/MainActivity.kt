@@ -31,6 +31,9 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import com.example.challenge6todolist.ui.theme.Challenge6TodoListTheme
 
+/**
+ * MainActivity for the To-Do List application. Sets up the UI for app, and manages task related data using viewModel.
+ */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +46,11 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+/**
+ * The main composable function for the To-Do List app.
+ * Displays the Text field for task, add task button, and the list of tasks.
+ * Interacts with the TaskViewModel to add, toggle, and delete tasks.
+ */
 @Composable
 fun TaskApp(viewModel: TaskViewModel = TaskViewModel()) {
     val taskList = viewModel.tasks
@@ -79,6 +87,10 @@ fun TaskApp(viewModel: TaskViewModel = TaskViewModel()) {
     }
 }
 
+/**
+ * Displays a single task item in the list.
+ * Displays a checkbox, task title and delete button.
+ */
 @Composable
 fun TaskItem(task: Task, onToggle: (Task) -> Unit, onDelete: () -> Unit) {
     Row(
