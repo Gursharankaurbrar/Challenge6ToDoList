@@ -1,5 +1,6 @@
 package com.example.challenge6todolist
 
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -21,8 +22,12 @@ class TaskViewModel : ViewModel() {
     }
 
     fun toggleTask(task: Task) {
-        TaskRepository.updateTask(task.copy(isDone = !task.isDone))
+        val updatedTask = task.copy(isDone = !task.isDone)
+        Log.d("TaskViewModel", "Toggling task ${task.id}: isDone = ${updatedTask.isDone}")
+        TaskRepository.updateTask(updatedTask)
+
     }
+
 
     fun deleteTask(taskId: String) {
         TaskRepository.deleteTask(taskId)

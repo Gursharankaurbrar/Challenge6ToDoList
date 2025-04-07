@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
     }
 
 @Composable
-fun TaskApp(viewModel: TaskViewModel) {
+fun TaskApp(viewModel: TaskViewModel = TaskViewModel()) {
     val taskList = viewModel.tasks
 
     var newTaskTitle by remember { mutableStateOf("") }

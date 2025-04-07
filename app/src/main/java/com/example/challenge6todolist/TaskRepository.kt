@@ -1,6 +1,7 @@
 package com.example.challenge6todolist
 
 import android.annotation.SuppressLint
+import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 
 object TaskRepository {
@@ -22,8 +23,10 @@ object TaskRepository {
     }
 
     fun updateTask(task: Task) {
+        Log.d("TaskRepository", "Updating task ${task.id}: isDone = ${task.isDone}")
         tasksCollection.document(task.id).set(task)
     }
+
 
     fun deleteTask(taskId: String) {
         tasksCollection.document(taskId).delete()
